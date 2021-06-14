@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>layout</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .kartica1 img {
+            vertical-align: middle;
+            display: inline-block;
+            width: 50%;
+        }
+        .kartica2 img{
+            vertical-align: middle;
+            width: 50%;
+            float: right;
+
+        }
+        .kartica2 .tekst1{
+            vertical-align: middle;
+            margin-left: 100px;
+            margin-top: 150px;
+        }
+        .kartica1 .tekst1 {
+            vertical-align: middle;
+        }
+
+        div.tekst1 {
+            display: inline-block;
+            margin-left: 20px;
+            color: black;
+        }
+
+        .dugme {
+            margin-top: 30px;
+            width: 100px;
+            height: 50px;
+            color: black;
+            background-color: white;
+            border-color: orange;
+            border-radius: 10px;
+            border-width: 4px;
+        }
+
+        .dugme:hover {
+            color: white;
+            background-color: gold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="uvodtekst">
+        <p
+            style="font-size: 30px; color: black; font-weight: bold; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; margin-left: 20%;">
+            Udruzenje "Ugostitelji Sandzaka"</p>
+        <P style="margin-left: 20%;">Udruženje Ugostitelji Sandžaka obuhvata preko 200 ugostitelja iz Sandžaka, <br>i
+            svakim danom nam se pridružuju novi članovi. Želimo da naglasimo da su svi<br> DOBRODOŠLI nezavisno koje su
+            verske ili političke pripadnosti.<br> Cilj nam je poboljšanje uslova rada</P>
+    </div>
+    <div class="kartica1">
+        <img src="./slika1.jpg">
+        <div class="tekst1">
+            <p style="font-size: 50px; font-weight: bold; margin: 50px 0px 0px 0px;">UUS</p>
+            <p style="color: darkgray;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Lorem
+                ipsum
+                dolor sit amet, consectetur adipiscing elit.<br> Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                dapibus leo.</p>
+            <button class="dugme">O nama</button>
+        </div>
+    </div>
+    <div class="kartica2">
+        <div class="tekst1">
+            <p style="font-size: 50px; font-weight: bold; margin: 50px 0px 0px 0px;">UUS</p>
+            <p style="color: darkgray;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Lorem
+                ipsum
+                dolor sit amet, consectetur adipiscing elit.<br> Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                dapibus leo.</p>
+            <button class="dugme">O nama</button>
+        </div>
+        <img src="./slika1.jpg">
+    </div>
+</body>
+
+</html>

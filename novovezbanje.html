@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <style>
+          body{
+              background-color: black;
+          }
+          div.kartica{
+            border: 2px solid;
+            border-color: grey;
+            border-radius: 15px;
+            color: white;
+            background-color: rgb(49, 45, 45);
+            width: 30%;
+          }
+          div.kartica i {
+              visibility: hidden;
+              padding: 4px;
+              border: 1px solid lightgray;
+              border-radius: 4px;
+          }
+          div.kartica:hover {
+              border-color: lightgray ;
+              cursor: pointer;
+          }
+          div.kartica:hover #da{
+              visibility:visible;
+              background-color: lightgray;
+          }
+          div.naslov{
+              font-size: 20px;
+          }
+          div.slika{
+              display: inline-block;
+              margin-left: 23px;
+              border:none;
+              border-color: grey;
+              border-radius: 20px;
+              overflow: hidden;
+          }
+          div.tekst{
+              color: lightgray;
+          }
+          #strelica {
+              color: white;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="kartica">
+        <img src="./sliciaq.png" width="25px" height="25px" style="margin-top: 10px; margin-left: 25px;">
+        <i id="da" class="fas fa-flag" style="float: right; margin-top: 10px; margin-right: 25px;"></i>
+          <div class="naslov">
+              <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin-left: 25px;">Wonderbox: Create your own <br>adventures</p>
+          </div>
+          <div class="tekst">
+              <p style="margin-left: 25px;margin-bottom: 0px;">Today 1m read time</p>
+          </div>
+          <div class="slika">
+          <img src="./minecraft.jpg" width="350px" height="200px">
+          </div>
+          <i id="strelica" class="fas fa-arrow-up"></i>
+        </div>
+    </body>
+</html>
