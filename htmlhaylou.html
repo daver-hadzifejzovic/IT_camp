@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            body {
+    margin: 0;
+    padding: 0;
+    background-color: limegreen;
+}
+
+.kontejner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+   
+    
+}
+
+.dug{
+    margin: 10px auto;
+    width: 300px;
+    height: 100px;
+    border: 4px solid white;
+    border-radius: 6px;
+    padding: 20px;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.dug ,
+.dug::after{
+    transition: all 0.5s;
+}
+
+.dug::before ,
+.dug::after{   
+    background: white;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+.dug:hover{
+    color: limegreen;
+}
+
+.dugme1::after{
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+}
+
+.dugme1:hover::after{
+    height: 100%;
+}
+
+.dugme2::after{
+    width: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.dugme2:hover::after{
+    width: 100%;
+}
+
+.dugme3::after{
+    height: 0;
+    width: 0;
+    left: 50%;
+    top: 50%;
+}
+
+.dugme3:hover::after{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.dugme4::after{
+    height: 0;
+    width: 0;
+    left: 70%;
+    top: 30%;
+}
+
+.dugme4:hover::after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="kontejner">
+
+            <button class="dug dugme1">Dugme 1</button>
+            <button class="dug dugme2">Dugme 2</button>
+            <button class="dug dugme3">Dugme 3</button>
+            <button class="dug dugme4">Dugme 4</button>
+
+        </div>
+
+    </body>
+</html>
