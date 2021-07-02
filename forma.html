@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-family:'Oswald', sans-serif;
+                background-image: url("./backg.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .formakontejner{
+                width: 60%;
+                height: auto;
+                margin: auto;
+                margin-top: 50px;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-image: linear-gradient(to right, rgb(219, 6, 219), rgb(0, 255, 149));
+                font-weight: 800;
+                opacity: 0.8;
+                z-index: 1;
+            }
+
+            .dugme{
+                    width: 90%;
+                    height: 30px;
+                    margin: 10px 0 10px 4%;
+                    border: none;
+                    background-color: purple;
+                    color: white;
+                }
+            .formaforma{
+                margin-top: 15px;
+            }
+
+            @media only screen and (max-width: 640px) {
+
+                .formakontejner{
+                    width: 100%;
+                    height: auto;
+                    border: 1px solid black;
+                }
+                .formaforma{
+                    width: 90%;
+                    height: 90%;
+                    margin: auto;
+                    margin-top: 20px;
+                    border: 1px solid black;
+                    border-radius: 6px;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .forma{
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-top: 5px;
+                    height: 90%;
+
+                }
+
+                .dugme{
+                    width: 90%;
+                    height: 30px;
+                    margin: 10px 0 10px 4%;
+                    border: none;
+                    background-color: purple;
+                    color: white;
+                }
+
+
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="formakontejner">
+            <div class="formaforma">
+                <div class="forma forma1">
+                    <form>
+                        <label for="fname" style="margin-left:4%;">Ime i prezime</label><br>
+                        <input type="text" id="fname" name="fname" style="width: 90%; margin-left: 4%;">
+                    </form>
+                    <form>
+                        <label for="age" style="margin-left:4%;">Godine</label><br>
+                        <input type="number" id="age" name="age" style="width: 90%; margin-left: 4%;">
+                    </form>
+                    <form>
+                        <label for="email" style="margin-left:4%;">E-mail</label><br>
+                        <input type="email" id="email" name="email" style="width: 90%; margin-left: 4%;">
+                    </form>
+                    <form>
+                        <label for="rodjenje" style="margin-left:4%;">Drzava</label><br>
+                        <input type="text" id="rodjenje" name="rodjenje" style="width: 90%; margin-left: 4%;">
+                    </form>
+                    <form>
+                        <label for="omiljeno" style="margin-left:4%;">Omiljeni feature od freecodecamp-a</label><br>
+                        <select id="omiljeno" name="omiljeno" style="width: 90%; margin-left: 4%;">
+                            <option value="tekst1">Neki tekst1</option>
+                            <option value="tekst2">Neki tekst2</option>
+                            <option value="tekst3">Neki tekst3</option>
+                            <option value="tekst4">Neki tekst4</option>
+                          </select>
+                    </form>
+                    <p style="margin: 5px 0 0 4%;">Neko pitanje</p>
+                    <form>
+                        <label style="margin-left: 4%;">Opcija 1</label><input type="radio" name="opcija1" id="opcija1"><br>
+                        <label style="margin-left: 4%;">Opcija 2</label><input type="radio" name="opcija1" id="opcija2"><br>
+                        <label style="margin-left: 4%;">Opcija 3</label><input type="radio" name="opcija1" id="opcija3"><br>
+                    </form>
+                    <p style="margin: 5px 0 0 4%;">Sta zelite da popravimo?</p>
+                    <form>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                        <input type="checkbox" id="scales" name="scales" checked style="margin-left: 4%;">
+                        <label for="scales" style="font-size: 15px;">Neki tekst</label><br>
+                    </form>
+                    <p style="margin: 5px 0 0 4%;">Komentar ili sugestija?</p>
+                    <textarea rows="4" cols="50" name="comment" form="usrform" style="width: 90%; margin-left: 4%;">Enter text here...</textarea>
+
+                    <button class="dugme">Submit</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </body>
+</html>

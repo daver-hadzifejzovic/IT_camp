@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+
+        <style>
+
+            body{
+                margin: 0;
+                padding: 0;
+            }
+
+            div.heder{
+                    width: 100%;
+                    height: 50px;
+                    font-size: 25px;
+                    text-align: center;
+                    background-color: black;
+                    position: fixed;
+                    z-index: 1;
+                    opacity: 0.9;
+                    transition: 0.8s;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+            }
+            .naziv{
+                    font-size: 25px;
+                    font-weight: 600;
+                    color: white;
+                    text-transform: uppercase;
+                    transition: 0.5s;
+                }
+            .dug{
+                height: 50px;
+                width: 100px;
+                font-size: 25px;
+                background: none;
+                padding: 0;
+                color: white;
+                border: none;
+                transition: 0.5s;
+            }
+            .dug:hover{
+                background-color: lightgray;
+            }
+            .dugmezam{
+                display: none;
+            }
+            .kontejnerzam{
+                display: none;
+            }
+
+            @media only screen and (max-width: 480px) {
+
+                div.heder{
+                    width: 100%;
+                    height: 50px;
+                    text-align: center;
+                    background-color: black;
+                    position: fixed;
+                    z-index: 1;
+                    opacity: 0.7;
+                }
+
+                .naziv{
+                    font-size: 15px;
+
+                }
+                .dugme1{
+                    display: none;
+                }
+
+                .dugmezam{
+                    display: inline-block;
+                    width: 50px;
+                    position: absolute;
+                    right: 30px;
+                    text-align: center;
+                    transition: 0.7s;
+                    cursor: pointer;
+                }
+                .kontejnerzam{
+                    width: 100%;
+                    height: 300px;
+                    border: 1px solid red;
+                    position: absolute;
+                    top: 50px;
+                }
+                
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div class="heder">
+
+            <div class="naziv">
+                <p style="margin: 0 0 0 20px">naziv</p>
+            </div>
+            <div class="stranice">
+                <button  class="dug dugme1">Home</button>
+                <button class="dug dugme1">Home</button>
+                <button class="dug dugme1">Home</button>
+                <button class="dug dugme1">Home</button>
+                <button class="dug dugme1">Home</button>
+            </div>
+            <div class="dugmezam" onClick="">
+                <button class="dug dugmem"><i class="fas fa-chevron-circle-down"></i></button>
+            </div>
+        </div>
+
+        <div class="kontejnerzam">
+
+        </div>
+
+
+        <script>  
+
+        </script>
+
+    </body>
+</html>
