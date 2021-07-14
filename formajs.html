@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+    <title>Forma js</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+            font-family: 'Oswald' , sans-serif;
+        }
+        .kontejner{
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: snow;
+            border: 1px solid black;
+            justify-content: center;
+        }
+        .forma1{
+            width: 90%;
+            margin: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .forma1 form{
+            width: 90%;
+        }
+        .forma2{
+            width: 90%;
+            margin: auto;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .forma2 form{
+            width: 90%;
+        }
+        .forma3{
+            width: 90%;
+            margin: auto;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .forma3 textarea{
+            width: 90%;
+        }
+        .submit{
+            width: 40%;
+            margin: auto;
+            height: 50px;
+            background-color: rgb(27, 168, 255);
+            cursor: pointer;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="kontejner">
+        <div class="forma forma1">
+            <form id="form">
+                <label for="fname">Ime</label>
+                <label for="email" style="margin-left: 48%;">Email</label><br>
+                <input name="fname" id="fname" type="text" style="width: 45%;margin-right: 4%;">
+                <input name="email" id="email" type="email" style="width: 45%;">
+            </form>
+        </div>
+        <div class="forma forma2">
+            <form id="form" style="margin-left: 5%;">
+                <label for="subject">Naslov</label><br>
+                <input name="subject" id="subject" type="text" style="width: 100%;">
+            </form>
+        </div>
+        <div class="forma forma3">
+            <form style="margin-left: 5%;" id="form">
+                <label for="poruka">Unesite Vasu poruku ovde</label><br>
+            <textarea name="poruka" id="poruka" rows="5" cols="5">Unesite Vasu poruku ovde</textarea>
+            </form>
+        </div>
+        <button class="submit" onclick="myFunction()">Submit</button>
+
+        <script>
+            function myFunction(){
+                document.getElementById("form").submit
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

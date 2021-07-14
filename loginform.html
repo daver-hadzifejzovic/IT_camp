@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Forma</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Oswald' , sans-serif;
+            display: flex;
+        }
+        .kontejner{
+            width: 47%;
+            height: auto;
+            margin: auto;
+            border: 1px solid black;
+            margin-top: 30px;
+            display: flex;
+        }
+        .klasa{
+            width: 47%;
+            height: auto;
+            margin: auto;
+            border: 1px solid black;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .kontejner input{
+            width: 90%;
+            margin-left: 5%;
+        }
+        .kontejner label{
+            margin-left: 5%;
+        }
+        .slider{
+            cursor: pointer;
+            background: limegreen;
+        }
+        p{
+            margin: 20px 0 5px 5%;
+        }
+        .submit{
+            border: none;
+            color: snow;
+            background-color: limegreen;
+            width: 90%;
+            height: 20px;
+            margin-left: 5%;
+            margin-bottom: 20px;
+        }   
+
+    </style>
+
+</head>
+<body>
+    <div class="kontejner lijevo" id="levo">
+        <div class="klasa input">
+        <form>
+            <label for="ime">Ime</label><br>
+            <input name="ime" id="ime" type="text" oninput="myFunction()">
+            <label for="prezime">Prezime</label><br>
+            <input name="prezime" id="prezime" type="text" oninput="myFunc()">
+            <label for="range">Vrednost</label>
+            <input type="range" min="1" max="100" value="50" id="slider" class="slider" oninput="myFunctio(this.value)">
+            <label for="timedate">Vreme i Datum</label>
+            <input type="datetime-local" name="timedate" id="timedate" style="text-align: center;" oninput="vreme(this.value)">
+            <p>Izaberite jednu ili vise opcija</p>
+            <label for="cekbox1">Opcija 1</label>
+            <input type="checkbox" name="cekbox1" id="cekbox1" onclick="cekjedan()">
+            <label for="cekbox2">Opcija 2</label>
+            <input type="checkbox" name="cekbox2" id="cekbox2" onclick="cekdva()">
+            <label for="cekbox3">Opcija 3</label>
+            <input type="checkbox" name="cekbox3" id="cekbox3" onclick="cektri()">
+            <label for="cekbox4">Opcija 4</label>
+            <input type="checkbox" name="cekbox4" id="cekbox4" onclick="cekcetiri()">
+            <label for="cekbox5">Opcija 5</label>
+            <input type="checkbox" name="cekbox5" id="cekbox5" onclick="cekpet()">
+            <label for="omiljeno" style="margin-bottom: 20px;">Omiljeno</label><br>
+                        <select id="omiljeno" name="omiljeno" style="width: 90%; margin-left: 5%;margin-bottom: 20px;" onclick="clikme()">
+                            <option id="tekst1" value="1" selected>Neki tekst0</option>
+                            <option id="tekst1" value="2" selected>Neki tekst1</option>
+                            <option id="tekst1" value="3" selected>Neki tekst2</option>
+                            <option id="tekst1" value="4" selected>Neki tekst3</option>
+                     </select>
+        </form>
+        <button class="submit" id="submit" onclick="submitMe()">Submit</button>
+        
+        </div>
+        <div class="klasa output">
+            <p id="ximex"></p>
+            <p id="xprezimex"></p>
+            <p id="xvrednostx"></p>
+            <p id="xvremex"></p>
+            <p>Izabrali ste opciju:</p>
+            <p id="xopcija1x" style="display: none;">Opcija 1</p>
+            <p id="xopcija2x" style="display: none;">Opcija 2</p>
+            <p id="xopcija3x" style="display: none;">Opcija 3</p>
+            <p id="xopcija4x" style="display: none;">Opcija 4</p>
+            <p id="xopcija5x" style="display: none;">Opcija 5</p>
+            <p id="opcija1" ></p>
+            
+
+        </div>
+    </div>
+    <div class="kontejner desno" id="desno">
+        <p id="svastanesto"></p>
+    </div>
+
+
+    <script>
+        function myFunction() {
+           var x = document.getElementById("ime").value;
+           document.getElementById("ximex").innerHTML = "Vase ime je " + x;
+        }
+        function myFunc() {
+           var y = document.getElementById("prezime").value;
+           document.getElementById("xprezimex").innerHTML = "Vase prezime je " + y;
+        }
+        function myFunctio(val) {
+           document.getElementById("xvrednostx").innerHTML = "Vasa vrednost je " + val; 
+        }
+        function vreme(val) {
+            document.getElementById("xvremex").innerHTML = "Vreme i datum : " + val;
+        }
+        function cekjedan() {
+            var checkBox = document.getElementById("cekbox1");
+            var text = document.getElementById ("xopcija1x");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+            }
+            function cekdva() {
+            var checkBox = document.getElementById("cekbox2");
+            var text = document.getElementById ("xopcija2x");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+            }
+            function cektri() {
+            var checkBox = document.getElementById("cekbox3");
+            var text = document.getElementById ("xopcija3x");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+            }
+            function cekcetiri() {
+            var checkBox = document.getElementById("cekbox4");
+            var text = document.getElementById ("xopcija4x");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+            }
+            function cekpet() {
+            var checkBox = document.getElementById("cekbox5");
+            var text = document.getElementById ("xopcija5x");
+            if (checkBox.checked == true) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+            }
+            function clikme(){
+                var omiljeno = document.getElementById("omiljeno")
+
+                document.getElementById("opcija1").innerHTML ="Neki tekst " + omiljeno.selectedIndex;
+            }
+
+            function submitMe() {
+                var ime = document.getElementById("ime").value;
+                var prezime = document.getElementById("prezime").value;
+                var slider = document.getElementById("slider").value;
+                var timedate = document.getElementById("timedate").value;
+                var cekbox1 = document.getElementById("cekbox1");
+                var cekbox2 = document.getElementById("cekbox2");
+                var cekbox3 = document.getElementById("cekbox3");
+                var cekbox4 = document.getElementById("cekbox4");
+                var cekbox5 = document.getElementById("cekbox5");
+                var omiljeno = document.getElementById("omiljeno");
+
+                document.getElementById("svastanesto").innerHTML += ime;
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += prezime;
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += slider;
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += timedate;
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                if (cekbox1.checked == true) {
+                    
+                    document.getElementById("svastanesto").innerHTML +="Opcija 1";
+                }
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                
+                if (cekbox2.checked == true) {
+                    document.getElementById("svastanesto").innerHTML +="Opcija 2";
+                }
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                
+                if (cekbox3.checked == true) {
+                    document.getElementById("svastanesto").innerHTML +="Opcija 3";
+                }
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                
+                if (cekbox4.checked == true) {
+                    document.getElementById("svastanesto").innerHTML +="Opcija 4";
+                }
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                
+                if (cekbox5.checked == true) {
+                    document.getElementById("svastanesto").innerHTML +="Opcija 5";
+                }
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML += "<br>";
+                document.getElementById("svastanesto").innerHTML +="Neki tekst " + omiljeno.selectedIndex;
+
+            }      
+
+    </script>
+    
+</body>
+</html>
